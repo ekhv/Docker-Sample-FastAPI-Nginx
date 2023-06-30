@@ -5,15 +5,12 @@ USER worker
 
 WORKDIR /usr/src/app
 
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir uvicorn[standard] fastapi
 
 ENV PATH="/home/worker/.local/bin:${PATH}"
 
 COPY . .
 
-ENV PORT=8000
-
 EXPOSE 8000
 
-CMD uvicorn test:app --reload --host 0.0.0.0 --port ${PORT}
+CMD uvicorn main:app --reload --host 0.0.0.0 --port 8000
