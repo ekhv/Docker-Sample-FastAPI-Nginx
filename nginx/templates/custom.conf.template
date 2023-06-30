@@ -66,5 +66,5 @@ map $http_upgrade $connection_upgrade {
   }
 
 upstream uvicorn {
-  server app:${APP_PORT};
+  server app:8000;
 }
