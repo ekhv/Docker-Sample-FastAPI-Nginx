@@ -1,4 +1,4 @@
-FROM python:3.10.2-slim
+FROM python:3.10.12-slim
 
 RUN adduser worker --disabled-password
 USER worker

@@ -8,7 +8,7 @@ services:
     networks:
       - my-network
   nginx:
-    image: nginx:1.21-alpine
+    image: nginx:stable-alpine3.17-slim
     ports:
       - 8080:80
     networks:
