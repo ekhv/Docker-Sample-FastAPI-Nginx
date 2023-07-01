@@ -17,7 +17,5 @@ services:
       - ./nginx/templates:/etc/nginx/templates
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
 
-  
-
 networks:
-  my-network: {}
+  my-network:
